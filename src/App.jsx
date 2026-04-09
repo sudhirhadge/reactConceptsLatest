@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+import StartTransition from "./Examples/13. StartTransition";
 // import HOCexample from "./Examples/1.HOC/3.HOCexample";
 // import RenderProps from "./Examples/2.RenderPropsPattern/3.RenderProps";
-import Hooks from "./Examples/3.Hooks/Hooks";
+// import Hooks from "./Examples/3.Hooks/Hooks";
 // import TestingApp from "./Examples/4.Testing/0.TestingApp";
 // import ImageUploader from "./Examples/5.ImageUpload/ImageUpload";
 // import RouterApp from "./Examples/6. Router/RouterApp";
@@ -14,15 +15,13 @@ import Hooks from "./Examples/3.Hooks/Hooks";
 // import UseDeferedValue from "./Examples/3.Hooks/8. useDeferedValue";
 // import UseTransition from "./Examples/3.Hooks/9. useTransition";
 
-// press F5 for opening server
 function App() {
   return (
     <div className="App">
-      My app is running
       {/* Enable one demo at a time by uncommenting the component below */}
       {/* <HOCexample /> */}
       {/* <RenderProps /> */}
-      <Hooks />
+      {/* <Hooks /> */}
       {/* <TestingApp /> */}
       {/* <ImageUploader /> */}
       {/* <RouterApp /> */}
@@ -33,6 +32,7 @@ function App() {
       {/* <ForwardRefDemo /> */}
       {/* <UseDeferedValue/> */}
       {/* <UseTransition/> */}
+      <StartTransition />
     </div>
   );
 }
