@@ -1,38 +1,54 @@
-import React from "react";
+import React, { useState, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { demos } from "./demos.config";
 import "./App.css";
-import StartTransition from "./Examples/13. StartTransition";
-// import HOCexample from "./Examples/1.HOC/3.HOCexample";
-// import RenderProps from "./Examples/2.RenderPropsPattern/3.RenderProps";
-// import Hooks from "./Examples/3.Hooks/Hooks";
-// import TestingApp from "./Examples/4.Testing/0.TestingApp";
-// import ImageUploader from "./Examples/5.ImageUpload/ImageUpload";
-// import RouterApp from "./Examples/6. Router/RouterApp";
-// import AppDataFetch from "./Examples/7.DataFetch/AppDataFetch";
-// import ReduxApp from "./Examples/8. Redux/ReduxApp";
-// import ReduxToolkitApp from "./Examples/9. Redux ToolKit/ReduxReduxToolKit";
-// import AdvancedExamples from "./Examples/11.Advanced";
-// import ForwardRefDemo from "./Examples/12.ForwardRef";
-// import UseDeferedValue from "./Examples/3.Hooks/8. useDeferedValue";
-// import UseTransition from "./Examples/3.Hooks/9. useTransition";
+
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div className="error">
+      <p>Something went wrong.</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Retry</button>
+    </div>
+  );
+}
 
 function App() {
+  const [activeDemo, setActiveDemo] = useState(null);
+
+  const ActiveComponent =
+    activeDemo !== null ? demos[activeDemo].component : null;
+
   return (
-    <div className="App">
-      {/* Enable one demo at a time by uncommenting the component below */}
-      {/* <HOCexample /> */}
-      {/* <RenderProps /> */}
-      {/* <Hooks /> */}
-      {/* <TestingApp /> */}
-      {/* <ImageUploader /> */}
-      {/* <RouterApp /> */}
-      {/* <AppDataFetch /> */}
-      {/* <ReduxApp /> */}
-      {/* <ReduxToolkitApp /> */}
-      {/* <AdvancedExamples /> */}
-      {/* <ForwardRefDemo /> */}
-      {/* <UseDeferedValue/> */}
-      {/* <UseTransition/> */}
-      <StartTransition />
+    <div className="app">
+      <header className="header">React Concepts Playground</header>
+
+      <div className="tabs">
+        {demos.map((demo, i) => (
+          <button
+            key={i}
+            onClick={() => setActiveDemo(i)}
+            className={`tab ${activeDemo === i ? "active" : ""}`}
+          >
+            {demo.name}
+          </button>
+        ))}
+      </div>
+
+      <main className="content">
+        <ErrorBoundary
+          FallbackComponent={ErrorFallback}
+          resetKeys={[activeDemo]}
+        >
+          <Suspense fallback={<p>Loading...</p>}>
+            {ActiveComponent ? (
+              <ActiveComponent />
+            ) : (
+              <p>Select a concept to view the demo.</p>
+            )}
+          </Suspense>
+        </ErrorBoundary>
+      </main>
     </div>
   );
 }
