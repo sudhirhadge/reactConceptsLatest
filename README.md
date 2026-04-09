@@ -33,7 +33,7 @@ This repository contains React concept demos and examples organized under src/Ex
   - Shared reusable logic components
 
 - React Hooks
-  - useState, useEffect, useRef, useMemo, useCallback, useContext, useReducer
+  - useState, useEffect, useRef, useMemo, useCallback, useContext, useReducer, useOptimistic
   - useLayoutEffect, useImperativeHandle, custom hook patterns
   - Context API for shared state
 
@@ -93,11 +93,6 @@ This repository contains React concept demos and examples organized under src/Ex
   - useImperativeHandle for custom ref methods
   - Real-life: focus management, library integrations
   - Tradeoffs: imperative vs declarative, tight coupling
-
-- useOptimistic
-  - Optimistic UI pattern for instant updates while async actions run.
-  - Todo list example with pending state.
-  - Demo of pairing with startTransition for non‑urgent updates.
 
   
 
