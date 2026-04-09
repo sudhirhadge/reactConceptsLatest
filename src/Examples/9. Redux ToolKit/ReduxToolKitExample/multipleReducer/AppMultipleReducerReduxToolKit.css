@@ -1,0 +1,84 @@
+/* Existing styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.counter,
+.message {
+  margin: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.counter,
+.message {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* New animation for counter update */
+@keyframes counterUpdate {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+  50% {
+    transform: scale(1.2);
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+    color: black;
+  }
+}
+
+.counter h1.animate {
+  animation: counterUpdate 0.5s ease-in-out;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .app {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

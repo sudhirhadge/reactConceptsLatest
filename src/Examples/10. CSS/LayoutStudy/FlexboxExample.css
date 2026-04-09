@@ -1,0 +1,12 @@
+.flex-container {
+  display: flex;
+  justify-content: space-around; /* Distributes space around items */
+  align-items: center; /* Aligns items vertically */
+  height: 100vh;
+}
+
+.flex-item {
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+}

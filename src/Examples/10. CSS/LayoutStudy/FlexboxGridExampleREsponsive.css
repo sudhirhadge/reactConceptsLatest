@@ -1,0 +1,26 @@
+.responsive-flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 10px; /* Adds space between items */
+}
+
+.responsive-flex-item {
+  background-color: lightcoral;
+  padding: 20px;
+  flex: 1 1 calc(33.333% - 10px); /* Default to 3 items per row */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+/* Media query for tablets (768px and up) */
+@media (max-width: 768px) {
+  .responsive-flex-item {
+    flex: 1 1 calc(50% - 10px); /* 2 items per row */
+  }
+}
+
+/* Media query for mobile devices (480px and up) */
+@media (max-width: 480px) {
+  .responsive-flex-item {
+    flex: 1 1 calc(100% - 10px); /* 1 item per row */
+  }
+}

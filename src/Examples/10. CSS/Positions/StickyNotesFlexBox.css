@@ -1,0 +1,124 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  background-color: #2196f3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #1976d2;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.note-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #2196f3;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #388e3c;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Space for the fixed toolbar */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.note {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.875rem;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.sidebar {
+  background-color: #ffeb3b;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 60px; /* Sticks below the toolbar */
+}
+
+@media (max-width: 600px) {
+  .note-input {
+    width: 200px;
+  }
+
+  .note {
+    width: 150px;
+  }
+
+  .sidebar {
+    width: 150px;
+  }
+}

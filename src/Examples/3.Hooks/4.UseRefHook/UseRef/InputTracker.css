@@ -1,0 +1,58 @@
+/* InputTracker.css */
+.input-tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://example.com/background.jpg"); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #2196f3;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.current-input,
+.previous-input {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.current-input {
+  color: #4caf50;
+}
+
+.previous-input {
+  color: #f44336;
+}
+
+@media (max-width: 600px) {
+  .current-input,
+  .previous-input {
+    font-size: 1.2rem;
+  }
+
+  .input-field {
+    font-size: 0.875rem;
+  }
+}

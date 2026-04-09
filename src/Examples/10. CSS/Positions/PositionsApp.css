@@ -1,0 +1,86 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.positioning-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.box {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Default to relative for demonstration */
+}
+
+.static-box {
+  position: static; /* Default positioning */
+}
+
+.relative-box {
+  position: relative;
+  top: 10px; /* Moves the element 10px down from its normal position */
+  left: 10px; /* Moves the element 10px to the right from its normal position */
+}
+
+.absolute-box {
+  position: absolute;
+  top: 20px; /* Moves the element 20px down from the nearest positioned ancestor */
+  right: 20px; /* Moves the element 20px to the left from the nearest positioned ancestor */
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 20px; /* Moves the element 20px up from the bottom of the viewport */
+  right: 20px; /* Moves the element 20px to the left from the right edge of the viewport */
+}
+
+.sticky-box {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Sticks the element to the top of its container when you scroll past it */
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+}
