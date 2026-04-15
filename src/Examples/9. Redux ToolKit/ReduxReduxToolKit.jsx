@@ -11,7 +11,7 @@ const ReduxReduxToolKit = () => {
       {/* <AppSingleReducer /> */}
       {/* <AppMultipleReducer /> */}
       {/* <AppSingleReducerReduxToolKit /> */}
-      <AppMultipleReducerReduxToolKit />
+      {/* <AppMultipleReducerReduxToolKit /> */}
     </div>
   );
 };
