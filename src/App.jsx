@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">React Concepts Playground</header>
+      <header className="header">React Concepts Playground by Sudhir</header>
 
       <div className="tabs">
         {demos.map((demo, i) => (
