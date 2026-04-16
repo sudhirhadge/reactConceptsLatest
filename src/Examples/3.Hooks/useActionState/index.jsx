@@ -29,6 +29,7 @@ function UseActionStateHook() {
          * - Typical pattern: preventDefault + local isLoading state + manual state updates
          * - Easy to end up with boilerplate and scattered logic across handler + UI
          */}
+        <h4>❌ Before: Manual State Handling</h4>
         <WithoutUseActionState />
         <hr />
 
@@ -40,6 +41,7 @@ function UseActionStateHook() {
          *   2) action    -> function to wire into <form action={action}> OR call manually
          *   3) isPending -> automatic loading flag while the action is running
          */}
+        <h4>✅ After: useActionState</h4>
         <WithUseActionState />
         <hr />
 
@@ -49,6 +51,7 @@ function UseActionStateHook() {
          * - This demo focuses on preserving input value on errors/retries
          * - Useful for validation flows: user should not retype input after an error
          */}
+        <h4>✨ UX Enhancement: Retaining Input Value</h4>
         <RetainingInputValue />
       </div>
     </div>

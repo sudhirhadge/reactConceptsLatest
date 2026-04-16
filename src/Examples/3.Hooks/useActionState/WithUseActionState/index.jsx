@@ -18,7 +18,7 @@ export default function WithUseActionState() {
 
     return (
         <form style={{ display: "flex", flexDirection: "column", width: "50%" }} action={action}>
-            <label htmlFor="firstName">First Name WithUseActionState</label>
+            <label htmlFor="firstName">First Name</label>
 
             <input id="firstName" name="firstName" type="text" />
 

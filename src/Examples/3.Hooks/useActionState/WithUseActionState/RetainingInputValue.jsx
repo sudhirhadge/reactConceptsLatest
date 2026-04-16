@@ -18,7 +18,7 @@ export default function RetainingInputValue() {
 
     return (
         <form style={{ display: "flex", flexDirection: "column", width: "50%" }} action={action}>
-            <label htmlFor="firstName">First Name WithUseActionState ; Retain input Value </label>
+            <label htmlFor="firstName">First Name</label>
 
             <input defaultValue={data?.fieldData?.firstName} id="firstName" name="firstName" type="text" />
 
