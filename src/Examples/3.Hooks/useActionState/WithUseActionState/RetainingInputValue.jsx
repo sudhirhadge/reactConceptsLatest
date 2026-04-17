@@ -1,9 +1,10 @@
 import React, { useActionState } from "react";
 
 export default function RetainingInputValue() {
+    // useActionState takes a function and initial data; this function is called when the form is submitted
     const [data, action, isLoading] = useActionState(saveUser, null);
 
-    /* No need to write below function now
+    /* No need to write below function now ; as we are using useActionState
       async function handleSubmit(e) {
           e.preventDefault();
           setIsLoading(true);
