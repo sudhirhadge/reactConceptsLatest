@@ -1,5 +1,5 @@
 import React from 'react'
-import WithoutUseActionState from './WithoutUseActionState.jsx'
+import WithoutUseActionState from './WithoutUseActionState.jsx/index.jsx'
 import WithUseActionState from './WithUseActionState/index.jsx'
 import RetainingInputValue from './WithUseActionState/RetainingInputValue.jsx'
 
@@ -75,13 +75,25 @@ function UseActionStateSummary() {
 
       <h3>Key Takeaways</h3>
       <ul>
+        <li>Nice for dealing with forms in React without <code>useForm</code>. </li>
+        <li>Earlier : forms management - state for errors, input fields , loading, etc ; </li>
         <li>
-          Eliminates multiple <code>useState</code> hooks for loading, error, and
+          Now it Eliminates multiple <code>useState</code> hooks for loading, error, and
           success handling.
         </li>
         <li>
           Returns three values: <code>state</code>, <code>action</code>, and
           <code>isPending</code>, making async flows predictable.
+        </li>
+        <li>
+          Facilitates error handling, retrying, and progressive updates.
+        </li>
+        <li>
+          Improves code organization by centralizing async action lifecycle.
+        </li>
+        <li>Actions are the functions which are called when form is submitted, can be run on server or client
+          depending on how you use them.
+
         </li>
         <li>
           Automatically tracks pending state during async actions without
@@ -95,6 +107,7 @@ function UseActionStateSummary() {
           Improves UX by enabling patterns like retaining input values after
           validation errors.
         </li>
+
       </ul>
     </section>
   )
