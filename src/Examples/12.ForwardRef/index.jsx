@@ -33,7 +33,7 @@ import React, { forwardRef, useRef, useImperativeHandle } from 'react'
  */
 
 // Custom Input Component using forwardRef
-const FancyInput = forwardRef((props, ref) => {
+export const FancyInput = forwardRef((props, ref) => {
   // this is Uncontrolled component as we are not using state to control value, we are directly manipulating DOM element
   //this ccomponent is just for demonstration of forwardRef, in real world you would want to use state to control value and make it controlled component
   return (
@@ -46,14 +46,14 @@ const FancyInput = forwardRef((props, ref) => {
         borderRadius: '4px',
         fontSize: '16px',
         outline: 'none',
-        ...props.style
+        ...(props.style || {}) // optional chaining
       }}
     />
   )
 })
 
 // Component demonstrating useImperativeHandle
-const ControlledInput = forwardRef((props, ref) => {
+export const ControlledInput = forwardRef((props, ref) => {
   // but this is Uncontrolled component as we are not using state to control value, we are directly manipulating DOM element
   const inputRef = useRef()
 
@@ -74,7 +74,7 @@ const ControlledInput = forwardRef((props, ref) => {
         borderRadius: '4px',
         fontSize: '16px',
         outline: 'none',
-        ...props.style
+        ...(props.style || {}) // optional chaining
       }}
     />
   )
