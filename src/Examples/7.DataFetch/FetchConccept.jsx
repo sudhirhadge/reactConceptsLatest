@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const FetchConcept = () => {
+export const FetchConcept = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
