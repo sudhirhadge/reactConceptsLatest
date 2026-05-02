@@ -19,6 +19,34 @@ export const demos = [
   {
     name: "Hooks",
     component: lazy(() => import("./Examples/3.Hooks/Hooks")),
+    subTopics: [
+      { name: "useState", component: lazy(() => import("./Examples/3.Hooks/1.UseStateHook/UseStateApp")) },
+      { name: "useCallback", component: lazy(() => import("./Examples/3.Hooks/2.UseCallbackHook/useCallbackApp")) },
+      { name: "useMemo", component: lazy(() => import("./Examples/3.Hooks/3.UseMemoHook/1.useMemoApp.jsx")) },
+      { name: "useRef", component: lazy(() => import("./Examples/3.Hooks/4.UseRefHook/UseRefApp.jsx")) },
+      { name: "useEffect", component: lazy(() => import("./Examples/3.Hooks/5.UseEffectHook/UseEffectHookApp.jsx")) },
+      { name: "useContext", component: lazy(() => import("./Examples/3.Hooks/6.useContext/1.UseContextApp.jsx")) },
+      { name: "useReducer", component: lazy(() => import("./Examples/3.Hooks/7.UseReducerHook/0.UseReducerApp.jsx")) },
+
+      {
+        name: "useDeferredValue",
+        component: lazy(() =>
+          import("./Examples/3.Hooks/8. useDeferedValue")
+        ),
+      },
+      {
+        name: "useTransition",
+        component: lazy(() =>
+          import("./Examples/3.Hooks/9. useTransition")
+        ),
+      },
+      { name: "useOptimistic UI", component: lazy(() => import("./Examples/3.Hooks/10. useOptimistic/index.jsx")) },
+      { name: "useActionState", component: lazy(() => import("./Examples/3.Hooks/11. useActionState/index.jsx")) },
+      { name: "useFormStatus", component: lazy(() => import("./Examples/3.Hooks/12. useFormStatus/index.jsx")) },
+      { name: "useFormState", component: lazy(() => import("./Examples/3.Hooks/13. useFormState/index.jsx")) },
+      // { name: "useLayoutEffect", component: lazy(() => import("./Examples/3.Hooks/14. UseLayoutEffect/index.jsx")) },
+    ]
+
   },
   {
     name: "Testing",

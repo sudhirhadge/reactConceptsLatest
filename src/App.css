@@ -1,58 +1,229 @@
-/* Layout */
+/* THEME */
+.app.dark {
+  --bg: #0f172a;
+  --sidebar: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #3b82f6;
+}
+
+.app.light {
+  --bg: #f9fafb;
+  --sidebar: #ffffff;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+/* GLOBAL */
 .app {
-  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+
 }
 
+.app * {
+  color: inherit;
+}
+
+/* HEADER */
 .header {
-  padding: 16px 24px;
-  background: #111;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-/* Tabs */
-.tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px 24px;
-  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.tab {
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background: #fff;
-  color: #333;
+/* BUTTON */
+.header button {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  height: calc(100vh - 64px);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: var(--sidebar);
+  padding: 16px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* MENU ITEM */
+.menu-item {
+  margin-bottom: 6px;
+}
+
+/* TITLE */
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.tab:hover {
-  background: #f5f5f5;
+.menu-title:hover {
+  background: var(--card);
 }
 
-.tab.active {
-  background: #2563eb;
-  color: #fff;
-  border-color: #2563eb;
+/* ACTIVE */
+.menu-title.active {
+  background: var(--accent);
+  color: white;
 }
 
-/* Content */
+/* ARROW */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+/* SUBMENU */
+.submenu {
+  margin-left: 12px;
+  margin-top: 6px;
+  border-left: 1px dashed rgba(255,255,255,0.1);
+  padding-left: 10px;
+}
+
+.submenu-item {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  color: var(--accent);
+}
+
+/* CONTENT */
 .content {
+  flex: 1;
   padding: 24px;
+  overflow-y: auto;
 }
 
-/* Error UI */
-.error {
-  padding: 16px;
-  border: 1px solid #f5c2c2;
-  background: #fff5f5;
+/* CARD STYLE (for your demos area) */
+.content > * {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* HEADER LAYOUT */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LEFT */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
   border-radius: 6px;
+  background: var(--accent);
+  color: white;
 }
 
-.error pre {
-  color: #d32f2f;
+/* CENTER SEARCH */
+.header-center input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--card);
+  color: var(--text);
+  width: 200px;
+}
+
+/* RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ICON BUTTON */
+.icon {
+  background: var(--card);
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* AVATAR */
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.footer-links span:hover {
+  color: var(--accent);
 }
